@@ -24,22 +24,22 @@ mainC) or *worst-fit* (worstFit/src/mainC).
   The files are structured in 2 main directories, one for each
 method implemented, as shown below:
 ```
-|--- firstFit/
-|     |--- makefile
-|     |
-|     |--- src/
-|          |--- libAssemblyMalloc.h
-|          |--- mainC.c
-|  
-|--- worstFit/
-|     |--- makefile
-|     |
-|     |--- src/
-|          |--- libAssemblyMalloc.h
-|          |--- mainC.c
-|
-|--- makefile
-|--- readme.md
+  |--- firstFit/
+  |     |--- makefile
+  |     |
+  |     |--- src/
+  |          |--- libAssemblyMalloc.h
+  |          |--- mainC.c
+  |  
+  |--- worstFit/
+  |     |--- makefile
+  |     |
+  |     |--- src/
+  |          |--- libAssemblyMalloc.h
+  |          |--- mainC.c
+  |
+  |--- makefile
+  |--- readme.md
 ```
 
   The functions used in this API are on the library 
