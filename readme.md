@@ -2,7 +2,7 @@
 
 ## Malloc API
   Implementaion of a malloc API in assembly using two methods of
-allocation the block in the heap: *First-fit* and *Worst-fit*.
+allocation the block in the heap: *first-fit* and *worst-fit*.
 
 ---
 
@@ -11,6 +11,12 @@ allocation the block in the heap: *First-fit* and *Worst-fit*.
 used, it doesn't specify a form of execution of the main, besides
 using `./main`. The source file .c are only used to prompt some 
 tests used to understand the functioning of the API.
+
+  The makefile inside a directory is specific of the method and it's
+run using only `make` (inside the directory). The makefile outside 
+the directories is run with `make t=target`, where target is the
+path for the main file that implements *first-fit* (firstFit/src/
+mainC) or *worst-fit* (worstFit/src/mainC).
 
 ---
 
@@ -32,6 +38,7 @@ method implemented, as shown below:
 |          |--- libAssemblyMalloc.h
 |          |--- mainC.c
 |
+|--- makefile
 |--- readme.md
 ```
 
@@ -55,8 +62,8 @@ method implemented, as shown below:
   The implementation uses a linked list method, where the value of 
 the initial top of the heap and current top are stores in global 
 varialbes heapTopInitial and heapTop, respectively. Each node of 
-the list have iformation about the size and state (filled/freed) of 
-the space allocated by the node. The node is composed by this 
+the list have information about the size and state (filled/freed) 
+of the space allocated by the node. The node is composed by this 
 infos, that ocupy 16 bytes, and the block it self. There are two 
 different forms of allocating memory that wore implemented: 
 *first-fit* and *worst-fit*.
