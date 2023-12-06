@@ -14,7 +14,7 @@ tests used to understand the functioning of the API.
 
   The makefile inside a directory is specific of the method and it's
 run using only `make` (inside the directory). The makefile outside 
-the directories is run with `make t=target`, where target is the
+the directories is run with `make t=target`, where *target* is the
 path for the main file that implements *first-fit* (firstFit/src/
 mainC) or *worst-fit* (worstFit/src/mainC).
 
@@ -61,11 +61,11 @@ method implemented, as shown below:
 ## Implemention
   The implementation uses a linked list method, where the value of 
 the initial top of the heap and current top are stores in global 
-varialbes heapTopInitial and heapTop, respectively. Each node of 
-the list have information about the size and state (filled/freed) 
-of the space allocated by the node. The node is composed by this 
-infos, that ocupy 16 bytes, and the block it self. There are two 
-different forms of allocating memory that wore implemented: 
+varialbes `heapTopInitial` and `heapTop`, respectively. Each node 
+of the list have information about the size and state (filled/
+freed) of the space allocated by the node. The node is composed by 
+these infos, that ocupies 16 bytes, and the block it self. There
+are two different forms of allocating memory that wore implemented: 
 *first-fit* and *worst-fit*.
 
   In the program, *%rax* is utilized only to handle return values of
